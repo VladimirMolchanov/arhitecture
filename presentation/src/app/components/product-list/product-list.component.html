@@ -1,0 +1,7 @@
+@for (item of products; track item.id) {
+  <div [id]="item.id">
+    <h3>{{item.name}} <span>{{item.price}} руб</span></h3>
+    <button (click)="handleAddProduct(item.id, item.price)">Добавить</button>
+  </div>
+}
+

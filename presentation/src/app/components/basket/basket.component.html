@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <td>Наименование</td>
+      <td>Количество</td>
+      <td>Цена</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    @if (items.length) {
+      @for (item of items; track item.productId) {
+        <tr>
+          <td>{{item?.name}}</td>
+          <td>{{item.amount}}</td>
+          <td>{{item.price}}</td>
+          <td><button (click)="deleteItem(item.productId)">Удалить</button></td>
+        </tr>
+      }
+    } @else {
+      Пусто
+    }
+  </tbody>
+</table>
