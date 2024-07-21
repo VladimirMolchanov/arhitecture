@@ -5,5 +5,5 @@ export interface Cart {
 export interface ProductCart {
     productId: string;
     amount: number;
-    price: string;
+    price: number;
 }
